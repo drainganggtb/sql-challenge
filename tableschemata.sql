@@ -1,3 +1,4 @@
+--Create tables
 CREATE TABLE employees (
 	emp_no VARCHAR(64) PRIMARY KEY,
 	emp_title_id VARCHAR(64),
@@ -7,6 +8,23 @@ CREATE TABLE employees (
 	sex VARCHAR(64),
 	hire_date DATE
 );
+-- create titles table
+DROP TABLE IF EXISTS titles;
+CREATE TABLE titles (
+	title_id VARCHAR(64) NOT NULL PRIMARY KEY,
+	title VARCHAR(64) NOT NULL
+);
+INSERT INTO titles (title_id, title)
+VALUES ('s0001', 'Staff'), 
+		('s0002', 'Senior Staff'), 
+		('e0001', 'Assistant Engineer'), 
+		('e0002', 'Engineer'),
+		('e0003', 'Senior Engineer'),
+		('e0004', 'Technique Leader'),
+		('m0001', 'Manager');
+SELECT * FROM titles
+		
+
 
 CREATE TABLE departments (
 	dept_no VARCHAR(64) PRIMARY KEY,
@@ -30,3 +48,5 @@ CREATE TABLE dept_manager (
 	emp_no VARCHAR(64),
 	PRIMARY KEY(dept_no, emp_no)
 );
+-- practice changing date format
+SELECT to_char(birth_date, 'mm/dd/yyyy') FROM employees
