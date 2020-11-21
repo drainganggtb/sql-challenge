@@ -40,3 +40,12 @@ Once the database was complete, the following questions were investigated:
 
 The code used to make these queries is in the file **quries.sql**
 
+## Bonus
+I generated a visualization of the data. First, the SQL database was imported into Pandas.
+
+The figures created were:
+- Histogram of the most common salary ranges for employees
+![alt text](common_salary_histogram.png)
+
+- Bar chart of average salary by title
+![alt text](Average_Salary_by_Title.png)
